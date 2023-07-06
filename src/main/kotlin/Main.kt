@@ -8,6 +8,10 @@ odd(arrayOf(12,34,56,44,22,89,66))
     party(20)
 
     numbers()
+   println( calc(listOf(80.0,89.0,45.0,44.0,50.0,60.0)))
+
+   println( getEvenCharacters("MAriagorettiKimanisuccessful"))
+
 
 }
 fun odd(nums: Array<Int>){
@@ -49,4 +53,15 @@ fun numbers() {
             println("Fizz")
         }
     }
+}
+fun calc(grades:List<Double>): Double{
+//    var sum = 0.0
+//    for(grade in grades){
+//        sum += grade
+//    }
+//    return sum / grades.size
+    return grades.average()
+}
+fun getEvenCharacters(input: String):String{
+    return  input.filterIndexed { index, _ ->index %2 ==0  }
 }
